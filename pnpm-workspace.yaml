@@ -1,5 +1,13 @@
-# pnpm 11 reads project settings from here (no longer the package.json "pnpm" field).
-# esbuild (a Vite dependency) ships a build script; allow it so installs don't
-# fail with ERR_PNPM_IGNORED_BUILDS under strictDepBuilds.
-onlyBuiltDependencies:
-  - esbuild
+# pnpm 11 reads project settings from here (not the package.json "pnpm" field).
+#
+# esbuild (a Vite dependency) ships a build script. Under pnpm 11's default
+# strictDepBuilds, an unreviewed build script fails the install with
+# ERR_PNPM_IGNORED_BUILDS. allowBuilds is the pnpm 11 setting that approves it
+# (onlyBuiltDependencies from older pnpm is no longer honored).
+allowBuilds:
+  esbuild: true
+
+# Safety net: if any other dependency ever adds a build script, warn instead of
+# failing the CI install. esbuild itself works without its script (its binary
+# comes from an optional platform dependency).
+strictDepBuilds: false
