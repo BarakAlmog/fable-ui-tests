@@ -1,0 +1,5 @@
+# pnpm 11 reads project settings from here (no longer the package.json "pnpm" field).
+# esbuild (a Vite dependency) ships a build script; allow it so installs don't
+# fail with ERR_PNPM_IGNORED_BUILDS under strictDepBuilds.
+onlyBuiltDependencies:
+  - esbuild
