@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Elara Voss - Independent Product &amp; Interaction Designer</title>
+    <meta
+      name="description"
+      content="Elara Voss is an independent product & interaction designer based in Lisbon, crafting digital products that feel effortless, clear and quietly bold."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Elara Voss - Product & Interaction Designer" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <!-- ░░ Grain + scanline overlay ░░ -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ░░ Custom cursor ░░ -->
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring">
+        <span class="cursor__label">View</span>
+      </div>
+    </div>
+
+    <!-- ░░ Preloader ░░ -->
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader__inner">
+        <div class="loader__row">
+          <span class="loader__name">
+            <span class="loader__word" data-word>Elara</span>
+            <span class="loader__word" data-word>Voss</span>
+          </span>
+          <span class="loader__role">Product &amp; Interaction Designer</span>
+        </div>
+        <div class="loader__bar"><span class="loader__fill" id="loaderFill"></span></div>
+        <div class="loader__count"><span id="loaderCount">0</span><i>%</i></div>
+      </div>
+    </div>
+
+    <!-- ░░ Navigation ░░ -->
+    <header class="nav" id="nav">
+      <a href="#top" class="nav__brand" data-cursor="hide">
+        <span class="nav__mark">EV</span>
+        <span class="nav__name">Elara&nbsp;Voss<sup>©</sup></span>
+      </a>
+      <nav class="nav__menu" aria-label="Primary">
+        <a href="#work" class="nav__link" data-link><span>Work</span></a>
+        <a href="#about" class="nav__link" data-link><span>About</span></a>
+        <a href="#recognition" class="nav__link" data-link><span>Recognition</span></a>
+      </nav>
+      <a href="#contact" class="nav__cta" data-magnetic data-cursor="hide">
+        <span class="nav__cta-label">Let's talk</span>
+        <span class="nav__cta-dot" aria-hidden="true"></span>
+      </a>
+    </header>
+
+    <main id="top" data-scroll-container>
+      <!-- ░░ Hero ░░ -->
+      <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="webgl" aria-hidden="true"></canvas>
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <div class="hero__top">
+          <p class="hero__eyebrow reveal-line">
+            <span class="dot" aria-hidden="true"></span>
+            Independent Designer
+          </p>
+          <p class="hero__loc reveal-line">
+            Lisbon, PT - <span data-clock>00:00:00</span>
+          </p>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner" data-stagger>Digital products,</span></span>
+          <span class="line"><span class="line__inner" data-stagger>designed with</span></span>
+          <span class="line"
+            ><span class="line__inner line__inner--serif" data-stagger
+              >intention<span class="period">.</span></span
+            ></span
+          >
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="hero__lede reveal-line">
+            Elara Voss partners with ambitious teams to shape interfaces that feel
+            effortless - blending systems thinking with an obsession for craft.
+          </p>
+          <a href="#work" class="hero__scroll" data-cursor="hide" aria-label="Scroll to work">
+            <span class="hero__scroll-text">Selected work</span>
+            <span class="hero__scroll-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 14l6 6 6-6" stroke="currentColor" stroke-width="1.4"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ░░ Marquee ░░ -->
+      <section class="marquee" aria-hidden="true">
+        <div class="marquee__track" id="marquee">
+          <div class="marquee__group">
+            <span>Product Design</span><i>✦</i>
+            <span>Design Systems</span><i>✦</i>
+            <span>Interaction</span><i>✦</i>
+            <span>Brand &amp; Identity</span><i>✦</i>
+            <span>Motion</span><i>✦</i>
+            <span>Prototyping</span><i>✦</i>
+          </div>
+          <div class="marquee__group">
+            <span>Product Design</span><i>✦</i>
+            <span>Design Systems</span><i>✦</i>
+            <span>Interaction</span><i>✦</i>
+            <span>Brand &amp; Identity</span><i>✦</i>
+            <span>Motion</span><i>✦</i>
+            <span>Prototyping</span><i>✦</i>
+          </div>
+        </div>
+      </section>
+
+      <!-- ░░ About / Manifesto ░░ -->
+      <section class="about" id="about">
+        <div class="section-head">
+          <span class="section-head__index">(01)</span>
+          <span class="section-head__label">About</span>
+        </div>
+        <div class="about__grid">
+          <p class="about__statement" data-words>
+            I believe the best design disappears. For the past eight years I've helped
+            startups and studios turn dense, complex problems into products that feel
+            obvious - quietly opinionated, deeply human, and built to last.
+          </p>
+          <div class="about__aside">
+            <div class="about__portrait" data-tilt>
+              <div class="about__portrait-inner">
+                <span class="about__portrait-label">Elara&nbsp;Voss</span>
+              </div>
+            </div>
+            <dl class="about__meta">
+              <div><dt>Focus</dt><dd>Product · Systems · Motion</dd></div>
+              <div><dt>Experience</dt><dd>8 years, independent</dd></div>
+              <div><dt>Based in</dt><dd>Lisbon, working worldwide</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ░░ Selected Work ░░ -->
+      <section class="work" id="work">
+        <div class="section-head">
+          <span class="section-head__index">(02)</span>
+          <span class="section-head__label">Selected Work</span>
+          <span class="section-head__count">Five projects</span>
+        </div>
+
+        <ul class="work__list" id="workList">
+          <li class="work__item" data-project
+              data-img="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=900&auto=format&fit=crop"
+              data-color="#7C9CFF">
+            <a href="#" class="work__link" data-cursor="view">
+              <span class="work__index">01</span>
+              <span class="work__name">Lumen</span>
+              <span class="work__tags">Fintech · Product Design</span>
+              <span class="work__year">2025</span>
+            </a>
+          </li>
+          <li class="work__item" data-project
+              data-img="https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=900&auto=format&fit=crop"
+              data-color="#C7F546">
+            <a href="#" class="work__link" data-cursor="view">
+              <span class="work__index">02</span>
+              <span class="work__name">Strata</span>
+              <span class="work__tags">Enterprise · Design Systems</span>
+              <span class="work__year">2024</span>
+            </a>
+          </li>
+          <li class="work__item" data-project
+              data-img="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=900&auto=format&fit=crop"
+              data-color="#5FE3A1">
+            <a href="#" class="work__link" data-cursor="view">
+              <span class="work__index">03</span>
+              <span class="work__name">Verdant</span>
+              <span class="work__tags">Climate · Product &amp; Brand</span>
+              <span class="work__year">2024</span>
+            </a>
+          </li>
+          <li class="work__item" data-project
+              data-img="https://images.unsplash.com/photo-1614851099511-773084f6911d?q=80&w=900&auto=format&fit=crop"
+              data-color="#FF7A5A">
+            <a href="#" class="work__link" data-cursor="view">
+              <span class="work__index">04</span>
+              <span class="work__name">Echo</span>
+              <span class="work__tags">Audio · Interaction Design</span>
+              <span class="work__year">2023</span>
+            </a>
+          </li>
+          <li class="work__item" data-project
+              data-img="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop"
+              data-color="#B79CFF">
+            <a href="#" class="work__link" data-cursor="view">
+              <span class="work__index">05</span>
+              <span class="work__name">Atlas</span>
+              <span class="work__tags">Travel · AI Product</span>
+              <span class="work__year">2023</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="work__reveal" id="workReveal" aria-hidden="true">
+          <div class="work__reveal-inner"></div>
+        </div>
+      </section>
+
+      <!-- ░░ Capabilities ░░ -->
+      <section class="cap" id="capabilities">
+        <div class="section-head">
+          <span class="section-head__index">(03)</span>
+          <span class="section-head__label">Capabilities</span>
+        </div>
+        <div class="cap__grid">
+          <article class="cap__card" data-reveal>
+            <span class="cap__num">01</span>
+            <h3 class="cap__title">Product Design</h3>
+            <p class="cap__text">End-to-end design from messy problem to shipped product - research, flows, UI, and the hand-off that makes engineers smile.</p>
+            <ul class="cap__list"><li>Discovery &amp; strategy</li><li>UX architecture</li><li>Interface design</li></ul>
+          </article>
+          <article class="cap__card" data-reveal>
+            <span class="cap__num">02</span>
+            <h3 class="cap__title">Design Systems</h3>
+            <p class="cap__text">Scalable, token-driven systems that keep teams fast and consistent - documented, themeable, and genuinely loved.</p>
+            <ul class="cap__list"><li>Component libraries</li><li>Design tokens</li><li>Governance</li></ul>
+          </article>
+          <article class="cap__card" data-reveal>
+            <span class="cap__num">03</span>
+            <h3 class="cap__title">Motion &amp; Prototyping</h3>
+            <p class="cap__text">High-fidelity, code-aware prototypes that make the right decision obvious - motion that guides rather than decorates.</p>
+            <ul class="cap__list"><li>Interaction design</li><li>Micro-motion</li><li>Live prototypes</li></ul>
+          </article>
+          <article class="cap__card" data-reveal>
+            <span class="cap__num">04</span>
+            <h3 class="cap__title">Design Direction</h3>
+            <p class="cap__text">Embedded direction for teams without a design lead - vision, critique, and the taste to know what to cut.</p>
+            <ul class="cap__list"><li>Creative direction</li><li>Team mentorship</li><li>Brand &amp; identity</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ░░ Recognition / Stats ░░ -->
+      <section class="stats" id="recognition">
+        <div class="section-head">
+          <span class="section-head__index">(04)</span>
+          <span class="section-head__label">Recognition</span>
+        </div>
+        <div class="stats__grid">
+          <div class="stats__item" data-reveal>
+            <span class="stats__num" data-count="8">0</span>
+            <span class="stats__label">Years independent</span>
+          </div>
+          <div class="stats__item" data-reveal>
+            <span class="stats__num" data-count="40" data-suffix="+">0</span>
+            <span class="stats__label">Products shipped</span>
+          </div>
+          <div class="stats__item" data-reveal>
+            <span class="stats__num" data-count="12">0</span>
+            <span class="stats__label">Awwwards &amp; honors</span>
+          </div>
+          <div class="stats__item" data-reveal>
+            <span class="stats__num" data-count="9">0</span>
+            <span class="stats__label">Industries served</span>
+          </div>
+        </div>
+        <div class="stats__logos" data-reveal>
+          <span>Trusted by</span>
+          <i>Vercel</i><i>Linear</i><i>Arc</i><i>Raycast</i><i>Framer</i><i>Retool</i>
+        </div>
+      </section>
+
+      <!-- ░░ Contact / Footer ░░ -->
+      <footer class="contact" id="contact">
+        <div class="contact__top">
+          <p class="contact__eyebrow reveal-line"><span class="dot" aria-hidden="true"></span> Available for select projects - 2026</p>
+          <h2 class="contact__title">
+            <span class="line"><span class="line__inner" data-stagger>Let's build</span></span>
+            <span class="line"><span class="line__inner" data-stagger>something <em>worth</em></span></span>
+            <span class="line"><span class="line__inner" data-stagger>remembering.</span></span>
+          </h2>
+          <a href="mailto:hello@elaravoss.studio" class="contact__email" data-magnetic data-cursor="hide">
+            <span>hello@elaravoss.studio</span>
+            <span class="contact__email-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="contact__cols">
+          <div class="contact__col">
+            <span class="contact__col-label">Socials</span>
+            <a href="#" data-link><span>Instagram</span></a>
+            <a href="#" data-link><span>Twitter / X</span></a>
+            <a href="#" data-link><span>LinkedIn</span></a>
+            <a href="#" data-link><span>Read.cv</span></a>
+          </div>
+          <div class="contact__col">
+            <span class="contact__col-label">Studio</span>
+            <p>Elara Voss Studio</p>
+            <p>Rua do Século 12</p>
+            <p>1200-433 Lisbon, PT</p>
+          </div>
+          <div class="contact__col">
+            <span class="contact__col-label">Now</span>
+            <p>Available May 2026</p>
+            <p>2 of 4 slots open</p>
+            <p><span data-clock>00:00:00</span> WEST</p>
+          </div>
+        </div>
+
+        <div class="contact__wordmark" aria-hidden="true">
+          <span data-marquee-foot>Elara Voss ✦ Elara Voss ✦ Elara Voss ✦&nbsp;</span>
+        </div>
+
+        <div class="contact__base">
+          <span>© 2026 - Designed &amp; built with intent</span>
+          <a href="#top" class="contact__top-link" data-cursor="hide">Back to top ↑</a>
+          <span>Lisbon · 38.72°N</span>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
